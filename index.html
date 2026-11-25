@@ -142,6 +142,30 @@
 .nka-acc-tags{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.35rem;}
 .nka-acc-tags span{font-size:.72rem;padding:.15rem .55rem;
   border:1px solid #ddd;color:#555;background:#fff;}
+
+  /* ── CLICKABLE TUTORIAL CARD ── */
+.nka a.nka-entry-link{
+  display:grid;grid-template-columns:120px 1fr;gap:1.5rem;
+  padding:1.25rem 1.25rem;margin:.5rem 0;
+  border:1px solid #e0e0e0;background:#fafafa;
+  color:inherit;text-decoration:none;
+  transition:background .15s,border-color .15s,box-shadow .15s;
+}
+.nka a.nka-entry-link:hover{
+  background:#f5f7fb;border-color:#2a5298;
+  box-shadow:0 2px 8px rgba(42,82,152,.12);
+  text-decoration:none;color:inherit;
+}
+.nka a.nka-entry-link:hover .nka-res-title{color:#2a5298;}
+.nka-entry-cta{
+  display:inline-block;margin-top:.75rem;
+  font-size:.82rem;font-weight:600;color:#2a5298;
+}
+.nka a.nka-entry-link:hover .nka-entry-cta{text-decoration:underline;}
+
+@media(max-width:720px){
+  .nka a.nka-entry-link{grid-template-columns:80px 1fr;gap:1rem;}
+}
   
 </style>
 
@@ -638,29 +662,32 @@
 
   <div class="nka-entries">
 
-    <div class="nka-entry">
-      <div class="nka-entry-year">
-        <span class="nka-res-cat">In preparation<br/> 2026</span>
-      </div>
-      <div>
-        <div class="nka-res-title">
-          A Beginner's Guide to Working with LASI Data
-        </div>
-        <div class="nka-res-desc">
-          Notes I'm putting together for students getting started with the Longitudinal
-          Ageing Study in India (LASI) covering how to request and download the data,
-          making sense of the survey design and codebooks, and taking the first steps
-          in Stata/R. Written as a walk-through for newcomers rather than a formal course.
-        </div>
-        <div class="nka-tools">
-          <span class="nka-tool">LASI</span>
-          <span class="nka-tool">Data Access</span>
-          <span class="nka-tool">Survey Design</span>
-          <span class="nka-tool">Stata</span>
-          <span class="nka-tool">R</span>
-        </div>
-      </div>
+<a class="nka-entry-link" href="https://YOUR-BLOG.blogspot.com/p/lasi-guide.html">
+  <div class="nka-entry-year">
+    
+    <span class="nka-res-cat">In preparation<br/> 2026</span>
+  </div>
+  <div>
+    <div class="nka-res-title">
+      A Beginner's Guide to Working with LASI Data
     </div>
+    <div class="nka-res-desc">
+      Notes I'm putting together for students getting started with the Longitudinal
+      Ageing Study in India (LASI) covering how to request and download the data,
+      making sense of the survey design and codebooks, and taking the first steps
+      in Stata/R. Written as a walk-through for newcomers rather than a formal course.
+    </div>
+    <div class="nka-tools">
+      <span class="nka-tool">LASI</span>
+      <span class="nka-tool">Data Access</span>
+      <span class="nka-tool">Survey Design</span>
+      <span class="nka-tool">Stata</span>
+      <span class="nka-tool">R</span>
+    </div>
+    <span class="nka-entry-cta">Read the guide &rarr;</span>
+  </div>
+</a>
+  </div>
 
     <!-- Add more notes/tutorials here as you write them -->
 
