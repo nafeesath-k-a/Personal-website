@@ -143,30 +143,29 @@
 .nka-acc-tags span{font-size:.72rem;padding:.15rem .55rem;
   border:1px solid #ddd;color:#555;background:#fff;}
 
-  /* ── CLICKABLE TUTORIAL CARD ── */
-.nka a.nka-entry-link{
+/* ── CLICKABLE TUTORIAL CARD ── */
+.nka .nka-entry-link{
   display:grid;grid-template-columns:120px 1fr;gap:1.5rem;
-  padding:1.25rem 1.25rem;margin:.5rem 0;
+  padding:1.25rem;margin:.5rem 0;
   border:1px solid #e0e0e0;background:#fafafa;
-  color:inherit;text-decoration:none;
+  color:inherit;text-decoration:none;cursor:pointer;
   transition:background .15s,border-color .15s,box-shadow .15s;
 }
-.nka a.nka-entry-link:hover{
+.nka .nka-entry-link:hover{
   background:#f5f7fb;border-color:#2a5298;
   box-shadow:0 2px 8px rgba(42,82,152,.12);
   text-decoration:none;color:inherit;
 }
-.nka a.nka-entry-link:hover .nka-res-title{color:#2a5298;}
+.nka .nka-entry-link:hover .nka-res-title{color:#2a5298;}
 .nka-entry-cta{
   display:inline-block;margin-top:.75rem;
   font-size:.82rem;font-weight:600;color:#2a5298;
 }
-.nka a.nka-entry-link:hover .nka-entry-cta{text-decoration:underline;}
+.nka .nka-entry-link:hover .nka-entry-cta{text-decoration:underline;}
 
 @media(max-width:720px){
-  .nka a.nka-entry-link{grid-template-columns:80px 1fr;gap:1rem;}
+  .nka .nka-entry-link{grid-template-columns:80px 1fr;gap:1rem;}
 }
-  
 </style>
 
 <div class="nka">
@@ -304,96 +303,94 @@
         </div>
       </div>
 
+      <h2 class="nka-page-title" style="margin-top:3rem;">Experience</h2>
+      <div class="nka-entries">
 
-<h2 class="nka-page-title" style="margin-top:3rem;">Experience</h2>
-<div class="nka-entries">
-  
-  <div class="nka-entry">
-  <div class="nka-entry-year">2026 &ndash; Present</div>
-  <div>
-    <div class="nka-entry-degree">Research Contributor (Project-based)</div>
-    <div class="nka-entry-inst">Impact of Ambient Air Quality on the Elderly Population: A Comparative Study of Delhi, Mumbai and Thiruvananthapuram</div>
-    <div class="nka-entry-detail">
-      Contributing to a Research Catalyst Grant (2026&ndash;2027) funded by the University of Toronto India Foundation and School of Cities India. Responsibilities include identifying ward-level study areas through Python-based geospatial coding, analysing PM2.5 exposure data, and supporting field data collection and fieldwork coordination. Project team: S. Irudaya Rajan, Michelle Buckley, and Arvind Pandey.
-    </div>
-  </div>
-</div>
-  
-  <div class="nka-entry">
-    <div class="nka-entry-year">2024</div>
-    <div>
-      <div class="nka-entry-degree">Visiting Faculty (Statistics)</div>
-      <div class="nka-entry-inst">MVR Institute of Life Science and Research Studies, Kerala</div>
-      <div class="nka-entry-detail">Designed and delivered a statistics module for M.Sc. Forestry students. Hands-on R training for statistical applications.</div>
-    </div>
-  </div>
+        <div class="nka-entry">
+          <div class="nka-entry-year">2026 &ndash; Present</div>
+          <div>
+            <div class="nka-entry-degree">Research Contributor (Project-based)</div>
+            <div class="nka-entry-inst">Impact of Ambient Air Quality on the Elderly Population: A Comparative Study of Delhi, Mumbai and Thiruvananthapuram</div>
+            <div class="nka-entry-detail">
+              Contributing to a Research Catalyst Grant (2026&ndash;2027) funded by the University of Toronto India Foundation and School of Cities India. Responsibilities include identifying ward-level study areas through Python-based geospatial coding, analysing PM2.5 exposure data, and supporting field data collection and fieldwork coordination. Project team: S. Irudaya Rajan, Michelle Buckley, and Arvind Pandey.
+            </div>
+          </div>
+        </div>
 
-  <div class="nka-entry">
-    <div class="nka-entry-year">Oct &ndash; Dec 2024</div>
-    <div>
-      <div class="nka-entry-degree">Academic Content Developer &amp; Coach</div>
-      <div class="nka-entry-inst">Centre for Information and Guidance India (CIGI), Calicut</div>
-      <div class="nka-entry-detail">Developed and taught a specialised UGC-NET curriculum on Urbanization and Migration, delivered through online classes.</div>
-    </div>
-  </div>
+        <div class="nka-entry">
+          <div class="nka-entry-year">2024</div>
+          <div>
+            <div class="nka-entry-degree">Visiting Faculty (Statistics)</div>
+            <div class="nka-entry-inst">MVR Institute of Life Science and Research Studies, Kerala</div>
+            <div class="nka-entry-detail">Designed and delivered a statistics module for M.Sc. Forestry students. Hands-on R training for statistical applications.</div>
+          </div>
+        </div>
 
-  <div class="nka-entry">
-    <div class="nka-entry-year">Nov 2022 &ndash; Present</div>
-    <div>
-      <div class="nka-entry-degree">Independent Research Consultant</div>
-      <div class="nka-entry-detail">Delivered quantitative and qualitative research support for academic and private clients. Transcribed 20+ hours of interviews on sensitive topics (e.g., transgender experiences) and conducted qualitative coding under strict confidentiality. Applied statistical modelling, demographic techniques, and spatial analysis to sample surveys and longitudinal data.</div>
-    </div>
-  </div>
+        <div class="nka-entry">
+          <div class="nka-entry-year">Oct &ndash; Dec 2024</div>
+          <div>
+            <div class="nka-entry-degree">Academic Content Developer &amp; Coach</div>
+            <div class="nka-entry-inst">Centre for Information and Guidance India (CIGI), Calicut</div>
+            <div class="nka-entry-detail">Developed and taught a specialised UGC-NET curriculum on Urbanization and Migration, delivered through online classes.</div>
+          </div>
+        </div>
 
-</div>
+        <div class="nka-entry">
+          <div class="nka-entry-year">Nov 2022 &ndash; Present</div>
+          <div>
+            <div class="nka-entry-degree">Independent Research Consultant</div>
+            <div class="nka-entry-detail">Delivered quantitative and qualitative research support for academic and private clients. Transcribed 20+ hours of interviews on sensitive topics (e.g., transgender experiences) and conducted qualitative coding under strict confidentiality. Applied statistical modelling, demographic techniques, and spatial analysis to sample surveys and longitudinal data.</div>
+          </div>
+        </div>
 
+      </div>
 
-<h2 class="nka-page-title" style="margin-top:3rem;">Dissertation &amp; Projects</h2>
+      <h2 class="nka-page-title" style="margin-top:3rem;">Dissertation &amp; Projects</h2>
 
       <div class="nka-entries">
 
-
-       
         <!-- Master's Dissertation -->
         <div class="nka-entry">
-  <div class="nka-entry-year">
-    <span class="nka-res-cat">Master's<br/>Dissertation</span>
-  </div>
-  <div>
-    <div class="nka-res-title">
-      Work Participation, Autonomy, and Husband's Migration: Study of Highly Educated Women in Kerala
-    </div>
-    <div class="nka-res-desc">
-      <b>Guide:</b> Dr. Archana Roy, IIPS Mumbai.
-    </div>
-    <div class="nka-tools">
-      <span class="nka-tool">NFHS-4</span>
-      <span class="nka-tool">KMS 2018</span>
-      <span class="nka-tool">NSSO 2017–18</span>
-      <span class="nka-tool">Stata</span>
-    </div>
-  </div>
-</div>
+          <div class="nka-entry-year">
+            <span class="nka-res-cat">Master's<br/>Dissertation</span>
+          </div>
+          <div>
+            <div class="nka-res-title">
+              Work Participation, Autonomy, and Husband's Migration: Study of Highly Educated Women in Kerala
+            </div>
+            <div class="nka-res-desc">
+              <b>Guide:</b> Dr. Archana Roy, IIPS Mumbai.
+            </div>
+            <div class="nka-tools">
+              <span class="nka-tool">NFHS-4</span>
+              <span class="nka-tool">KMS 2018</span>
+              <span class="nka-tool">NSSO 2017–18</span>
+              <span class="nka-tool">Stata</span>
+            </div>
+          </div>
+        </div>
+
         <!-- Master's Field Research Project -->
-      <div class="nka-entry">
-  <div class="nka-entry-year">
-    <span class="nka-res-cat">Master's<br/>Field Project</span>
-  </div>
-  <div>
-    <div class="nka-res-title">
-      A Study on Solid Waste Management and Its Health Risks in Govandi, Mumbai
-    </div>
-    <div class="nka-res-desc">
-      <b>Guide:</b> Dr. R. Nagarajan, IIPS Mumbai.
-    </div>
-    <div class="nka-tools">
-      <span class="nka-tool">IDIs</span>
-      <span class="nka-tool">KIIs</span>
-      <span class="nka-tool">FGDs</span>
-      <span class="nka-tool">Social Mapping</span>
-    </div>
-  </div>
-</div>
+        <div class="nka-entry">
+          <div class="nka-entry-year">
+            <span class="nka-res-cat">Master's<br/>Field Project</span>
+          </div>
+          <div>
+            <div class="nka-res-title">
+              A Study on Solid Waste Management and Its Health Risks in Govandi, Mumbai
+            </div>
+            <div class="nka-res-desc">
+              <b>Guide:</b> Dr. R. Nagarajan, IIPS Mumbai.
+            </div>
+            <div class="nka-tools">
+              <span class="nka-tool">IDIs</span>
+              <span class="nka-tool">KIIs</span>
+              <span class="nka-tool">FGDs</span>
+              <span class="nka-tool">Social Mapping</span>
+            </div>
+          </div>
+        </div>
+
         <!-- Graduation Project -->
         <div class="nka-entry">
           <div class="nka-entry-year">
@@ -403,7 +400,6 @@
             <div class="nka-res-title">
               A Study on Socio-Economic and Health Status of Autorickshaw Drivers
             </div>
-           
             <div class="nka-tools">
               <span class="nka-tool">SPSS</span>
               <span class="nka-tool">Quantitative Survey</span>
@@ -414,317 +410,298 @@
 
       </div>
 
-
-
       <h2 class="nka-page-title" style="margin-top:3rem;">Extracurricular Activities</h2>
       <div class="nka-entries">
         <div class="nka-entry">
           <div class="nka-entry-year">2023</div>
           <div>
-            <div class="nka-entry-degree">Taekwondo (1st Dan Black Belt) </div>
+            <div class="nka-entry-degree">Taekwondo (1st Dan Black Belt)</div>
             <div class="nka-entry-detail">Kukkiwon, South Korea, 2024</div>
           </div>
-        </div>
-        
         </div>
         <div class="nka-entry">
           <div class="nka-entry-year">Ongoing</div>
           <div>
-            <div class="nka-entry-degree">Yoga  Instructor &nbsp;&middot;&nbsp; Government of India (PMKVY)</div>
+            <div class="nka-entry-degree">Yoga Instructor &nbsp;&middot;&nbsp; Government of India (PMKVY)</div>
             <div class="nka-entry-detail">Certified yoga instructor with regular practice</div>
           </div>
         </div>
       </div>
     </div>
-<!-- PUBLICATIONS -->
-<div class="nka-page-content" id="page-publications">
-  <h2 class="nka-page-title">Publications &amp; Presentations</h2>
 
-  <div class="nka-pub-section-head">Journal Articles</div>
+    <!-- PUBLICATIONS -->
+    <div class="nka-page-content" id="page-publications">
+      <h2 class="nka-page-title">Publications &amp; Presentations</h2>
 
-  <div class="nka-entries">
-    <div class="nka-entry">
-      <div class="nka-entry-year">2025&ndash;26</div>
-      <div>
-        <div class="nka-pub-status">Selected for Publication</div>
-        <div class="nka-pub-title">Highly Educated but Out of Work: Migration&rsquo;s Contradictory Effects on Women in Kerala</div>
-        <div class="nka-pub-authors"><em>Nafeesath K A</em> &amp; Roy, A. K.</div>
-        <div class="nka-pub-venue"><em>India Quarterly</em></div>
-        <div class="nka-pub-note">Examines the autonomy paradox and male out-migration effects on female labour force participation. Data: NFHS-4, KMS 2018, NSSO 2017&ndash;18.</div>
-      </div>
-    </div>
-  </div>
+      <div class="nka-pub-section-head">Journal Articles</div>
 
-  <div class="nka-pub-section-head">Conference Presentations</div>
-
-  <div class="nka-entries">
-
-    <div class="nka-entry">
-  <div class="nka-entry-year">2026</div>
-  <div>
-    <div class="nka-pub-title">Adult Children's Cohabitation Patterns, Gender Composition, and Parental Well-being</div>
-    <div class="nka-pub-authors"><em>Nafeesath K A</em></div>
-    <div class="nka-pub-venue">DemARS 2026 Annual International Research Symposium, Department of Demography, University of Colombo, Sri Lanka December 9, 2026.</div>
-   
-  </div>
-</div>
-    
-    <div class="nka-entry">
-      <div class="nka-entry-year">2026</div>
-      <div>
-        <div class="nka-pub-title">Urban Housing Insecurity Among Internal Migrants from Kerala in Chennai: Mobility, Risk, and Protection Gaps</div>
-        <div class="nka-pub-authors"><em>Nafeesath K A</em></div>
-        <div class="nka-pub-venue">National Conference: <em>&ldquo;From Push to Pull: Unveiling the Realities of Migration 2026&rdquo;</em>, MSSW, Chennai, March 9, 2026.</div>
-      </div>
-    </div>
-    <div class="nka-entry">
-      <div class="nka-entry-year">2025</div>
-      <div>
-        <div class="nka-pub-title">Highly Educated but Out of Work: Migration&rsquo;s Contradictory Effects on Women in Kerala</div>
-        <div class="nka-pub-authors"><em>Nafeesath K A</em></div>
-        <div class="nka-pub-venue">5th Annual International Migration Conference, IIMAD &amp; ICWA, November 17&ndash;18, 2025.</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <!-- RESEARCH -->
-<div class="nka-page-content" id="page-research">
-  <h2 class="nka-page-title">Research</h2>
-
-  <div class="nka-accordion">
-
-    <!-- 1. RESEARCH AREAS -->
-    <div class="nka-accordion-item">
-      <button class="nka-accordion-header" onclick="nkaToggle(this)">
-        <span>Research Areas</span>
-        <span class="nka-acc-arrow">▶</span>
-      </button>
-      <div class="nka-accordion-body">
-        <ul class="nka-acc-list">
-          <li>
-            <span class="nka-acc-label">Migration</span>
-            <span class="nka-acc-content">
-              Internal and international migration, remittances beyond economics, labour force participation of women in migrant households, autonomy paradox in Kerala.
-            </span>
-          </li>
-          <li>
-            <span class="nka-acc-label">Gender &amp; Labour</span>
-            <span class="nka-acc-content">
-              Female labour force participation, care work, household decision-making, gendered migration outcomes.
-            </span>
-          </li>
-          <li>
-            <span class="nka-acc-label">Ageing &amp; Health</span>
-            <span class="nka-acc-content">
-              Longitudinal ageing research (LASI, HRS family), elderly wellbeing, health inequalities in later life.
-            </span>
-          </li>
-          <li>
-            <span class="nka-acc-label">Demography</span>
-            <span class="nka-acc-content">
-              Mortality, fertility differentials, population ageing, demographic transition in the Global South.
-            </span>
-          </li>
-          <li>
-            <span class="nka-acc-label">Geospatial</span>
-            <span class="nka-acc-content">
-              Spatial analysis of demographic and health inequalities, district-level clustering, evidence-based policy targeting.
-            </span>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- 2. METHODS & TOOLS -->
-    <div class="nka-accordion-item">
-      <button class="nka-accordion-header" onclick="nkaToggle(this)">
-        <span>Methods &amp; Tools</span>
-        <span class="nka-acc-arrow">▶</span>
-      </button>
-      <div class="nka-accordion-body">
-        <ul class="nka-acc-list">
-          <li>
-            <span class="nka-acc-label">Software</span>
-            <span class="nka-acc-content">
-              Stata · R · Python · SPSS · SAS
-            </span>
-          </li>
-          <li>
-            <span class="nka-acc-label">Geospatial</span>
-            <span class="nka-acc-content">
-              QGIS · GeoDa · R (sf, tmap, ggplot2) · Folium
-            </span>
-          </li>
-          <li>
-            <span class="nka-acc-label">Demographic</span>
-            <span class="nka-acc-content">
-              MortPak · CSPro · DHS Program Tools · NFHS / NSSO / KMS data handling
-            </span>
-          </li>
-          <li>
-            <span class="nka-acc-label">Qualitative</span>
-            <span class="nka-acc-content">
-              NVivo · ATLAS.ti · IDIs · FGDs · KIIs · Social Mapping
-            </span>
-          </li>
-          <li>
-            <span class="nka-acc-label">Statistical</span>
-            <span class="nka-acc-content">
-              Multilevel modelling · Survival analysis · Logistic regression · Decomposition · Longitudinal data analysis
-            </span>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-<!-- 3. WORKING PAPERS / PROJECTS -->
-<div class="nka-accordion-item">
-  <button class="nka-accordion-header" onclick="nkaToggle(this)">
-    <span>Working Papers &amp; Projects</span>
-    <span class="nka-acc-arrow">▶</span>
-  </button>
-  <div class="nka-accordion-body">
-    <ul class="nka-acc-list">
-
-      <li>
-        <span class="nka-acc-label">Working Paper</span>
-        <span class="nka-acc-content">
-          <b>International Migration Disruptions and Domestic Labour Mobility in India: Evidence from ECR Data (Bayesian Structural Time Series Model).</b><br/>
-          <em> Nafeesath K A · Pankaj Chowdhury  · Dr. Arvind Kumar Pandey</em>
-        </span>
-      </li>
-
-      <li>
-        <span class="nka-acc-label">Working Paper</span>
-        <span class="nka-acc-content">
-          <b>Decomposing the Intersectional Effects of Caste and Gender on Digital Communication, Safety and Financial Competence Divide in India: Evidence from the Comprehensive Modular Survey (Telecom), 2025.</b><br/>
-          <em>Pankaj Chowdhury · Sanchita Bhattacharya · Nafeesath K A · Dr. Arvind Kumar Pandey</em>
-        </span>
-      </li>
-
-      <li>
-        <span class="nka-acc-label">Web Map</span>
-        <span class="nka-acc-content">
-          <b>Kochi Urban Change (2018 vs 2025) — NDBI &amp; MNDWI Analysis.</b><br/>
-          A geospatial comparison of built-up expansion and surface-water signals in Kochi using Sentinel-2 imagery.<br/>
-          <em>Author: Nafeesath K A</em><br/>
-          <a href="https://nafeesath-k-a.github.io/Spatial_mapping/Kochi_NDBI_MNDWI.html" target="_blank" style="color:#2a5298;">Open →</a>
-          <!-- Replace the href="#" above with the actual GitHub Pages URL once hosted -->
-        </span>
-      </li>
-
-      <li>
-        <span class="nka-acc-label">Conference</span>
-        <span class="nka-acc-content">
-          <b>Urban Housing Insecurity Among Internal Migrants from Kerala in Chennai: Mobility, Risk, and Protection Gaps.</b><br/>
-          <em>National Conference, MSSW Chennai, March 2026.</em>
-        </span>
-      </li>
-
-
-      <li>
-        <span class="nka-acc-label">Journal</span>
-        <span class="nka-acc-content">
-          <b>Highly Educated but Out of Work: Migration's Contradictory Effects on Women in Kerala.</b><br/>
-          <em>Nafeesath K A &amp; Roy, A. K.</em> — Selected for publication in <em>India Quarterly</em>, 2025–26.
-        </span>
-      </li>
-
-      <li>
-        <span class="nka-acc-label">Web Map</span>
-        <span class="nka-acc-content">
-          <b>IIT Tirupati Campus — Dustbin Locations Interactive Map.</b><br/>
-          <a href="https://nafeesath-k-a.github.io/Spatial_mapping/dustbin_map.html" target="_blank" style="color:#2a5298;">Open interactive map →</a>
-        </span>
-      </li>
-
-    </ul>
-  </div>
-</div>
- </div>       <!-- ← ADD: closes .nka-accordion -->
-</div>         <!-- ← ADD: closes #page-research -->   
-
-
-
-<!-- RESOURCES & NOTES -->
-<div class="nka-page-content" id="page-teaching">
-  <h2 class="nka-page-title">Resources &amp; Notes</h2>
-
-  <p class="nka-contact-intro">
-    A space for study notes, short tutorials, and occasional writing, mainly things I've
-    put together while learning and while helping students work with large survey data.
-    Shared in case they're useful to others starting out.
-  </p>
-
-  <!-- ── TUTORIALS / NOTES ── -->
-  <div class="nka-pub-section-head">Tutorials &amp; Study Notes</div>
-
-  <div class="nka-entries">
-
-<a class="nka-entry-link" href="https://YOUR-BLOG.blogspot.com/p/lasi-guide.html">
-  <div class="nka-entry-year">
-    
-    <span class="nka-res-cat">In preparation<br/> 2026</span>
-  </div>
-  <div>
-    <div class="nka-res-title">
-      A Beginner's Guide to Working with LASI Data
-    </div>
-    <div class="nka-res-desc">
-      Notes I'm putting together for students getting started with the Longitudinal
-      Ageing Study in India (LASI) covering how to request and download the data,
-      making sense of the survey design and codebooks, and taking the first steps
-      in Stata/R. Written as a walk-through for newcomers rather than a formal course.
-    </div>
-    <div class="nka-tools">
-      <span class="nka-tool">LASI</span>
-      <span class="nka-tool">Data Access</span>
-      <span class="nka-tool">Survey Design</span>
-      <span class="nka-tool">Stata</span>
-      <span class="nka-tool">R</span>
-    </div>
-    <span class="nka-entry-cta">Read the guide &rarr;</span>
-  </div>
-</a>
-  </div>
-
-    <!-- Add more notes/tutorials here as you write them -->
-
-  </div>
-
-  <!-- ── WRITING / BLOG ── -->
-  <div class="nka-pub-section-head">Writing</div>
-
-  <div class="nka-entries">
-
-    <div class="nka-entry">
-      <div class="nka-entry-year">Occasional</div>
-      <div>
-        <div class="nka-pub-title">Short notes </div>
-        <div class="nka-pub-note">
-          Writing on demography, migration, ageing, and research practice —
-          added whenever something feels worth sharing.
+      <div class="nka-entries">
+        <div class="nka-entry">
+          <div class="nka-entry-year">2025&ndash;26</div>
+          <div>
+            <div class="nka-pub-status">Selected for Publication</div>
+            <div class="nka-pub-title">Highly Educated but Out of Work: Migration&rsquo;s Contradictory Effects on Women in Kerala</div>
+            <div class="nka-pub-authors"><em>Nafeesath K A</em> &amp; Roy, A. K.</div>
+            <div class="nka-pub-venue"><em>India Quarterly</em></div>
+            <div class="nka-pub-note">Examines the autonomy paradox and male out-migration effects on female labour force participation. Data: NFHS-4, KMS 2018, NSSO 2017&ndash;18.</div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Add writing entries here, e.g.:
-    <div class="nka-entry">
-      <div class="nka-entry-year">2026</div>
-      <div>
-        <div class="nka-pub-title">Title</div>
-        <div class="nka-pub-note">Short description or link.</div>
+      <div class="nka-pub-section-head">Conference Presentations</div>
+
+      <div class="nka-entries">
+
+        <div class="nka-entry">
+          <div class="nka-entry-year">2026</div>
+          <div>
+            <div class="nka-pub-title">Adult Children's Cohabitation Patterns, Gender Composition, and Parental Well-being</div>
+            <div class="nka-pub-authors"><em>Nafeesath K A</em></div>
+            <div class="nka-pub-venue">DemARS 2026 Annual International Research Symposium, Department of Demography, University of Colombo, Sri Lanka December 9, 2026.</div>
+          </div>
+        </div>
+
+        <div class="nka-entry">
+          <div class="nka-entry-year">2026</div>
+          <div>
+            <div class="nka-pub-title">Urban Housing Insecurity Among Internal Migrants from Kerala in Chennai: Mobility, Risk, and Protection Gaps</div>
+            <div class="nka-pub-authors"><em>Nafeesath K A</em></div>
+            <div class="nka-pub-venue">National Conference: <em>&ldquo;From Push to Pull: Unveiling the Realities of Migration 2026&rdquo;</em>, MSSW, Chennai, March 9, 2026.</div>
+          </div>
+        </div>
+
+        <div class="nka-entry">
+          <div class="nka-entry-year">2025</div>
+          <div>
+            <div class="nka-pub-title">Highly Educated but Out of Work: Migration&rsquo;s Contradictory Effects on Women in Kerala</div>
+            <div class="nka-pub-authors"><em>Nafeesath K A</em></div>
+            <div class="nka-pub-venue">5th Annual International Migration Conference, IIMAD &amp; ICWA, November 17&ndash;18, 2025.</div>
+          </div>
+        </div>
+
       </div>
     </div>
-    -->
 
-  </div>
-</div>
+    <!-- RESEARCH -->
+    <div class="nka-page-content" id="page-research">
+      <h2 class="nka-page-title">Research</h2>
 
+      <div class="nka-accordion">
 
-  
-  <!-- CONTACT -->
+        <!-- 1. RESEARCH AREAS -->
+        <div class="nka-accordion-item">
+          <button class="nka-accordion-header" onclick="nkaToggle(this)">
+            <span>Research Areas</span>
+            <span class="nka-acc-arrow">▶</span>
+          </button>
+          <div class="nka-accordion-body">
+            <ul class="nka-acc-list">
+              <li>
+                <span class="nka-acc-label">Migration</span>
+                <span class="nka-acc-content">
+                  Internal and international migration, remittances beyond economics, labour force participation of women in migrant households, autonomy paradox in Kerala.
+                </span>
+              </li>
+              <li>
+                <span class="nka-acc-label">Gender &amp; Labour</span>
+                <span class="nka-acc-content">
+                  Female labour force participation, care work, household decision-making, gendered migration outcomes.
+                </span>
+              </li>
+              <li>
+                <span class="nka-acc-label">Ageing &amp; Health</span>
+                <span class="nka-acc-content">
+                  Longitudinal ageing research (LASI, HRS family), elderly wellbeing, health inequalities in later life.
+                </span>
+              </li>
+              <li>
+                <span class="nka-acc-label">Demography</span>
+                <span class="nka-acc-content">
+                  Mortality, fertility differentials, population ageing, demographic transition in the Global South.
+                </span>
+              </li>
+              <li>
+                <span class="nka-acc-label">Geospatial</span>
+                <span class="nka-acc-content">
+                  Spatial analysis of demographic and health inequalities, district-level clustering, evidence-based policy targeting.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 2. METHODS & TOOLS -->
+        <div class="nka-accordion-item">
+          <button class="nka-accordion-header" onclick="nkaToggle(this)">
+            <span>Methods &amp; Tools</span>
+            <span class="nka-acc-arrow">▶</span>
+          </button>
+          <div class="nka-accordion-body">
+            <ul class="nka-acc-list">
+              <li>
+                <span class="nka-acc-label">Software</span>
+                <span class="nka-acc-content">
+                  Stata · R · Python · SPSS · SAS
+                </span>
+              </li>
+              <li>
+                <span class="nka-acc-label">Geospatial</span>
+                <span class="nka-acc-content">
+                  QGIS · GeoDa · R (sf, tmap, ggplot2) · Folium
+                </span>
+              </li>
+              <li>
+                <span class="nka-acc-label">Demographic</span>
+                <span class="nka-acc-content">
+                  MortPak · CSPro · DHS Program Tools · NFHS / NSSO / KMS data handling
+                </span>
+              </li>
+              <li>
+                <span class="nka-acc-label">Qualitative</span>
+                <span class="nka-acc-content">
+                  NVivo · ATLAS.ti · IDIs · FGDs · KIIs · Social Mapping
+                </span>
+              </li>
+              <li>
+                <span class="nka-acc-label">Statistical</span>
+                <span class="nka-acc-content">
+                  Multilevel modelling · Survival analysis · Logistic regression · Decomposition · Longitudinal data analysis
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 3. WORKING PAPERS / PROJECTS -->
+        <div class="nka-accordion-item">
+          <button class="nka-accordion-header" onclick="nkaToggle(this)">
+            <span>Working Papers &amp; Projects</span>
+            <span class="nka-acc-arrow">▶</span>
+          </button>
+          <div class="nka-accordion-body">
+            <ul class="nka-acc-list">
+
+              <li>
+                <span class="nka-acc-label">Working Paper</span>
+                <span class="nka-acc-content">
+                  <b>International Migration Disruptions and Domestic Labour Mobility in India: Evidence from ECR Data (Bayesian Structural Time Series Model).</b><br/>
+                  <em>Nafeesath K A · Pankaj Chowdhury · Dr. Arvind Kumar Pandey</em>
+                </span>
+              </li>
+
+              <li>
+                <span class="nka-acc-label">Working Paper</span>
+                <span class="nka-acc-content">
+                  <b>Decomposing the Intersectional Effects of Caste and Gender on Digital Communication, Safety and Financial Competence Divide in India: Evidence from the Comprehensive Modular Survey (Telecom), 2025.</b><br/>
+                  <em>Pankaj Chowdhury · Sanchita Bhattacharya · Nafeesath K A · Dr. Arvind Kumar Pandey</em>
+                </span>
+              </li>
+
+              <li>
+                <span class="nka-acc-label">Web Map</span>
+                <span class="nka-acc-content">
+                  <b>Kochi Urban Change (2018 vs 2025) — NDBI &amp; MNDWI Analysis.</b><br/>
+                  A geospatial comparison of built-up expansion and surface-water signals in Kochi using Sentinel-2 imagery.<br/>
+                  <em>Author: Nafeesath K A</em><br/>
+                  <a href="https://nafeesath-k-a.github.io/Spatial_mapping/Kochi_NDBI_MNDWI.html" target="_blank" style="color:#2a5298;">Open →</a>
+                </span>
+              </li>
+
+              <li>
+                <span class="nka-acc-label">Conference</span>
+                <span class="nka-acc-content">
+                  <b>Urban Housing Insecurity Among Internal Migrants from Kerala in Chennai: Mobility, Risk, and Protection Gaps.</b><br/>
+                  <em>National Conference, MSSW Chennai, March 2026.</em>
+                </span>
+              </li>
+
+              <li>
+                <span class="nka-acc-label">Journal</span>
+                <span class="nka-acc-content">
+                  <b>Highly Educated but Out of Work: Migration's Contradictory Effects on Women in Kerala.</b><br/>
+                  <em>Nafeesath K A &amp; Roy, A. K.</em> — Selected for publication in <em>India Quarterly</em>, 2025–26.
+                </span>
+              </li>
+
+              <li>
+                <span class="nka-acc-label">Web Map</span>
+                <span class="nka-acc-content">
+                  <b>IIT Tirupati Campus — Dustbin Locations Interactive Map.</b><br/>
+                  <a href="https://nafeesath-k-a.github.io/Spatial_mapping/dustbin_map.html" target="_blank" style="color:#2a5298;">Open interactive map →</a>
+                </span>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RESOURCES & NOTES -->
+    <div class="nka-page-content" id="page-teaching">
+      <h2 class="nka-page-title">Resources &amp; Notes</h2>
+
+      <p class="nka-contact-intro">
+        A space for study notes, short tutorials, and occasional writing, mainly things I've
+        put together while learning and while helping students work with large survey data.
+        Shared in case they're useful to others starting out.
+      </p>
+
+      <!-- ── TUTORIALS / NOTES ── -->
+      <div class="nka-pub-section-head">Tutorials &amp; Study Notes</div>
+
+      <div class="nka-entries">
+
+        <div class="nka-entry-link" onclick="window.location='https://YOUR-BLOG.blogspot.com/p/lasi-guide.html'">
+          <div class="nka-entry-year">
+            <span class="nka-res-cat">In preparation<br/>2026</span>
+          </div>
+          <div>
+            <div class="nka-res-title">
+              A Beginner's Guide to Working with LASI Data
+            </div>
+            <div class="nka-res-desc">
+              Notes I'm putting together for students getting started with the Longitudinal
+              Ageing Study in India (LASI) covering how to request and download the data,
+              making sense of the survey design and codebooks, and taking the first steps
+              in Stata/R. Written as a walk-through for newcomers rather than a formal course.
+            </div>
+            <div class="nka-tools">
+              <span class="nka-tool">LASI</span>
+              <span class="nka-tool">Data Access</span>
+              <span class="nka-tool">Survey Design</span>
+              <span class="nka-tool">Stata</span>
+              <span class="nka-tool">R</span>
+            </div>
+            <a class="nka-entry-cta" href="https://YOUR-BLOG.blogspot.com/p/lasi-guide.html">Read the guide &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Add more notes/tutorials here as you write them -->
+
+      </div>
+
+      <!-- ── WRITING / BLOG ── -->
+      <div class="nka-pub-section-head">Writing</div>
+
+      <div class="nka-entries">
+
+        <div class="nka-entry">
+          <div class="nka-entry-year">Occasional</div>
+          <div>
+            <div class="nka-pub-title">Short notes</div>
+            <div class="nka-pub-note">
+              Writing on demography, migration, ageing, and research practice —
+              added whenever something feels worth sharing.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CONTACT -->
     <div class="nka-page-content" id="page-contact">
       <h2 class="nka-page-title">Contact</h2>
       <p class="nka-contact-intro">I welcome correspondence regarding PhD opportunities, research collaboration, and academic enquiries in demography, population studies, migration, and applied statistics.</p>
@@ -737,12 +714,10 @@
           <span class="nka-contact-key">Personal email</span>
           <span class="nka-contact-val"><a href="mailto:nafeesathka73@gmail.com">nafeesathka73@gmail.com</a></span>
         </div>
-        
         <div class="nka-contact-row">
           <span class="nka-contact-key">Address</span>
           <span class="nka-contact-val">Dept. of Humanities &amp; Social Sciences<br/>IIT Tirupati, Renigunta Road<br/>Tirupati, AP &ndash; 517619, India</span>
         </div>
-        
       </div>
     </div>
 
@@ -767,7 +742,6 @@
   function nkaToggle(btn){
   var item = btn.parentElement;
   var wasOpen = item.classList.contains('open');
-  /* optional: close all others first (accordion behavior) */
   document.querySelectorAll('.nka-accordion-item').forEach(function(i){
     i.classList.remove('open');
   });
