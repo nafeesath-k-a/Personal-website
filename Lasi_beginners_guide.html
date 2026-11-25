@@ -1,0 +1,376 @@
+<!-- BLOGGER: LASI Beginner's Guide — Pages → New Page → HTML view -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@300;400;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+.nka-guide*{box-sizing:border-box;margin:0;padding:0;}
+.nka-guide{font-family:"Source Sans 3","Helvetica Neue",Arial,sans-serif;font-size:16px;line-height:1.7;color:#333;background:#fff;}
+.nka-guide a{color:#2a5298;text-decoration:none;}
+.nka-guide a:hover{text-decoration:underline;color:#1a3a78;}
+
+/* ── TOP BAR ── */
+.nka-guide .g-topbar{background:#fff;border-bottom:1px solid #e0e0e0;padding:0 1rem;}
+.nka-guide .g-topbar-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:48px;}
+.nka-guide .g-crumb{font-size:.8rem;color:#888;}
+.nka-guide .g-crumb a{color:#2a5298;}
+.nka-guide .g-back{font-size:.8rem;color:#2a5298;}
+
+/* ── LAYOUT ── */
+.nka-guide .g-layout{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:220px 1fr;gap:3rem;padding:2.5rem 1rem 4rem;}
+
+/* ── SIDEBAR (ToC) ── */
+.nka-guide .g-toc{position:sticky;top:3rem;height:fit-content;}
+.nka-guide .g-toc-title{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:#888;margin-bottom:.75rem;}
+.nka-guide .g-toc-list{list-style:none;display:flex;flex-direction:column;gap:.35rem;border-left:2px solid #e8e8e8;padding-left:.9rem;}
+.nka-guide .g-toc-list a{font-size:.82rem;color:#555;display:block;line-height:1.45;}
+.nka-guide .g-toc-list a:hover{color:#2a5298;text-decoration:none;}
+.nka-guide .g-toc-sub{padding-left:.7rem;margin-top:.2rem;}
+.nka-guide .g-toc-sub a{font-size:.76rem;color:#888;}
+
+/* ── MAIN ── */
+.nka-guide .g-main{min-width:0;}
+.nka-guide .g-kicker{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:#888;margin-bottom:.4rem;}
+.nka-guide .g-title{font-family:"Source Serif 4",Georgia,serif;font-size:2rem;font-weight:400;color:#1a1a1a;line-height:1.25;margin-bottom:.75rem;}
+.nka-guide .g-standfirst{font-size:1rem;color:#444;line-height:1.8;margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid #d0d0d0;}
+.nka-guide .g-meta{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem;}
+.nka-guide .g-meta span{font-size:.72rem;padding:.15rem .55rem;border:1px solid #ddd;color:#666;background:#fafafa;}
+
+/* headings */
+.nka-guide h2.g-h2{font-family:"Source Serif 4",Georgia,serif;font-size:1.45rem;font-weight:400;color:#1a1a1a;margin:2.75rem 0 .4rem;scroll-margin-top:4rem;}
+.nka-guide h3.g-h3{font-family:"Source Serif 4",Georgia,serif;font-size:1.12rem;font-weight:600;color:#1a1a1a;margin:1.75rem 0 .35rem;scroll-margin-top:4rem;}
+.nka-guide .g-secnum{color:#2a5298;font-weight:400;margin-right:.35rem;}
+
+/* body text */
+.nka-guide .g-p{font-size:.95rem;color:#333;line-height:1.85;margin-bottom:1rem;}
+.nka-guide .g-p:last-child{margin-bottom:0;}
+.nka-guide .g-list{font-size:.95rem;color:#333;line-height:1.85;margin:0 0 1rem 1.15rem;}
+.nka-guide .g-list li{margin-bottom:.35rem;}
+
+/* code */
+.nka-guide .g-code{font-family:"JetBrains Mono","SFMono-Regular",Consolas,monospace;font-size:.82rem;line-height:1.65;background:#f7f8fa;border:1px solid #e3e6ec;border-left:3px solid #2a5298;padding:.85rem 1rem;color:#2b2f36;overflow-x:auto;margin:.75rem 0 1rem;white-space:pre;}
+.nka-guide .g-code code{font-family:inherit;background:none;padding:0;}
+.nka-guide .g-inline{font-family:"JetBrains Mono","SFMono-Regular",Consolas,monospace;font-size:.84em;background:#f2f4f7;border:1px solid #e3e6ec;padding:.05rem .35rem;color:#2b2f36;}
+
+/* callout */
+.nka-guide .g-note{background:#f5f7fb;border:1px solid #c5d3f0;border-left:3px solid #2a5298;padding:.85rem 1rem;margin:1rem 0 1.25rem;font-size:.88rem;color:#333;line-height:1.7;}
+.nka-guide .g-note strong{color:#1a1a1a;}
+.nka-guide .g-note .g-note-label{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#2a5298;margin-bottom:.3rem;}
+
+/* step cards */
+.nka-guide .g-steps{display:flex;flex-direction:column;gap:.75rem;margin:1rem 0 1.5rem;counter-reset:step;}
+.nka-guide .g-step{border:1px solid #e0e0e0;background:#fafafa;padding:1rem 1.15rem;display:grid;grid-template-columns:34px 1fr;gap:.9rem;}
+.nka-guide .g-step::before{counter-increment:step;content:counter(step);width:30px;height:30px;display:flex;align-items:center;justify-content:center;border:1px solid #2a5298;color:#2a5298;font-size:.8rem;font-weight:600;border-radius:50%;}
+.nka-guide .g-step-title{font-size:.92rem;font-weight:600;color:#1a1a1a;margin-bottom:.2rem;}
+.nka-guide .g-step-body{font-size:.86rem;color:#444;line-height:1.75;}
+
+/* table */
+.nka-guide .g-table{width:100%;border-collapse:collapse;margin:.75rem 0 1.25rem;font-size:.85rem;}
+.nka-guide .g-table th{text-align:left;font-weight:600;color:#1a1a1a;background:#f5f7fb;border-bottom:1px solid #d0d0d0;padding:.5rem .7rem;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;}
+.nka-guide .g-table td{border-bottom:1px solid #ebebeb;padding:.5rem .7rem;color:#333;vertical-align:top;line-height:1.6;}
+.nka-guide .g-table tr:last-child td{border-bottom:none;}
+
+/* FAQ / accordion reuse */
+.nka-guide .g-acc{display:flex;flex-direction:column;gap:.5rem;margin:1rem 0 1.5rem;}
+.nka-guide .g-acc-item{border:1px solid #e0e0e0;background:#fafafa;}
+.nka-guide .g-acc-head{display:flex;justify-content:space-between;align-items:center;padding:.85rem 1.1rem;cursor:pointer;font-family:"Source Serif 4",Georgia,serif;font-size:.98rem;font-weight:600;color:#1a1a1a;background:#fff;border:none;width:100%;text-align:left;transition:background .15s;}
+.nka-guide .g-acc-head:hover{background:#f5f7fb;}
+.nka-guide .g-acc-head .g-acc-arrow{font-size:.8rem;color:#2a5298;transition:transform .25s;}
+.nka-guide .g-acc-item.open .g-acc-arrow{transform:rotate(90deg);}
+.nka-guide .g-acc-body{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .25s ease;padding:0 1.1rem;font-size:.87rem;color:#444;line-height:1.8;}
+.nka-guide .g-acc-item.open .g-acc-body{max-height:2000px;padding:.85rem 1.1rem 1.1rem;}
+
+/* footer nav */
+.nka-guide .g-pagenav{display:flex;justify-content:space-between;gap:1rem;margin-top:3rem;padding-top:1.25rem;border-top:1px solid #d0d0d0;font-size:.85rem;}
+.nka-guide .g-pagenav a{color:#2a5298;}
+.nka-guide .g-pagenav .g-muted{color:#aaa;}
+
+@media(max-width:720px){
+  .nka-guide .g-layout{grid-template-columns:1fr;gap:2rem;}
+  .nka-guide .g-toc{position:static;order:2;border-top:1px solid #e8e8e8;padding-top:1.25rem;}
+  .nka-guide .g-main{order:1;}
+  .nka-guide .g-title{font-size:1.6rem;}
+  .nka-guide .g-step{grid-template-columns:1fr;}
+}
+</style>
+
+<div class="nka-guide">
+
+<!-- TOP BAR -->
+<div class="g-topbar">
+  <div class="g-topbar-inner">
+    <div class="g-crumb"><a href="/p/resources-notes.html">Resources &amp; Notes</a> &nbsp;/&nbsp; LASI Guide</div>
+    <a class="g-back" href="/p/resources-notes.html">&larr; All notes</a>
+  </div>
+</div>
+
+<div class="g-layout">
+
+  <!-- SIDEBAR / TOC -->
+  <aside class="g-toc">
+    <div class="g-toc-title">On this page</div>
+    <ul class="g-toc-list">
+      <li><a href="#lasi-what">1. What is LASI?</a></li>
+      <li><a href="#lasi-access">2. Getting the data</a>
+        <ul class="g-toc-list g-toc-sub">
+          <li><a href="#lasi-access-request">Request &amp; approval</a></li>
+          <li><a href="#lasi-access-files">What you get</a></li>
+        </ul>
+      </li>
+      <li><a href="#lasi-structure">3. Survey structure</a>
+        <ul class="g-toc-list g-toc-sub">
+          <li><a href="#lasi-structure-design">Design &amp; weights</a></li>
+          <li><a href="#lasi-structure-codebook">Reading the codebook</a></li>
+        </ul>
+      </li>
+      <li><a href="#lasi-first">4. First steps in Stata / R</a>
+        <ul class="g-toc-list g-toc-sub">
+          <li><a href="#lasi-first-stata">Stata</a></li>
+          <li><a href="#lasi-first-r">R</a></li>
+        </ul>
+      </li>
+      <li><a href="#lasi-weights">5. Weights &amp; variance</a></li>
+      <li><a href="#lasi-checks">6. Common pitfalls</a></li>
+      <li><a href="#lasi-faq">7. FAQ</a></li>
+      <li><a href="#lasi-refs">8. Further reading</a></li>
+    </ul>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="g-main">
+
+    <div class="g-kicker">Tutorial &middot; In preparation</div>
+    <h1 class="g-title">A Beginner&rsquo;s Guide to Working with LASI Data</h1>
+    <p class="g-standfirst">
+      Notes for students getting started with the Longitudinal Ageing Study in India (LASI):
+      how to request and download the data, how the survey design and codebooks are organised,
+      and the first steps in Stata or R. Written as a walk-through rather than a formal course.
+      It is a living document &mdash; sections, figures, and worked examples will be filled in as I go.
+    </p>
+    <div class="g-meta">
+      <span>LASI</span>
+      <span>Data access</span>
+      <span>Survey design</span>
+      <span>Stata</span>
+      <span>R</span>
+      <span>Last updated: 2026</span>
+    </div>
+
+    <!-- 1 -->
+    <h2 class="g-h2" id="lasi-what"><span class="g-secnum">1.</span>What is LASI?</h2>
+    <p class="g-p">
+      LASI is India&rsquo;s first nationally representative longitudinal survey of adults aged 45 and above,
+      designed to mirror the family of Health and Retirement Studies (HRS, SHARE, CHARLS, etc.). It is
+      the main source for studying ageing, health, and economic wellbeing in India, and it links
+      naturally to the questions I work on around elderly wellbeing and household structure.
+    </p>
+    <p class="g-p">
+      This section will eventually include: waves and coverage, sampling frame, key modules, and how
+      LASI compares to NFHS and NSSO for the kinds of questions you might want to ask.
+    </p>
+
+    <!-- 2 -->
+    <h2 class="g-h2" id="lasi-access"><span class="g-secnum">2.</span>Getting the data</h2>
+    <p class="g-p">
+      LASI is not a public download the way NFHS is. Access is managed by the IIPS / LASI team and
+      requires a short application. The exact steps below are the ones I followed &mdash; they may change.
+    </p>
+
+    <h3 class="g-h3" id="lasi-access-request">2.1 Requesting access</h3>
+    <div class="g-steps">
+      <div class="g-step">
+        <div>
+          <div class="g-step-title">Identify yourself and your institution</div>
+          <div class="g-step-body">You will need an institutional email and a supervisor or PI who can vouch for the use of the data.</div>
+        </div>
+      </div>
+      <div class="g-step">
+        <div>
+          <div class="g-step-title">Submit the data request form</div>
+          <div class="g-step-body">Briefly state the research question, the variables you need, and the level of geography (state / district / individual).</div>
+        </div>
+      </div>
+      <div class="g-step">
+        <div>
+          <div class="g-step-title">Sign the data use agreement</div>
+          <div class="g-step-body">Standard confidentiality terms &mdash; no re-distribution, no attempt to re-identify respondents.</div>
+        </div>
+      </div>
+      <div class="g-step">
+        <div>
+          <div class="g-step-title">Receive the download link</div>
+          <div class="g-step-body">Typically a secure link plus a codebook and a short README. Keep the README &mdash; it saves hours later.</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="g-h3" id="lasi-access-files">2.2 What you get</h3>
+    <table class="g-table">
+      <thead>
+        <tr><th>File / folder</th><th>What it contains</th><th>Use it for</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Individual module</td><td>One row per respondent aged 45+</td><td>Most health, cognition, and work analyses</td></tr>
+        <tr><td>Household module</td><td>One row per household</td><td>Consumption, assets, household composition</td></tr>
+        <tr><td>Section modules</td><td>Long-format files for specific topics (e.g. ADL, chronic conditions)</td><td>Merging to the individual file</td></tr>
+        <tr><td>Codebook</td><td>Variable names, labels, value codes, skip logic</td><td>Everything &mdash; read this before you touch the data</td></tr>
+        <tr><td>Weights &amp; design</td><td>Sampling weights and strata/PSU identifiers</td><td>Any population-level estimate</td></tr>
+      </tbody>
+    </table>
+
+    <div class="g-note">
+      <span class="g-note-label">Note</span>
+      The exact file names and module structure differ between waves. Always read the release notes that
+      ship with a new wave before assuming a variable name or a module layout is unchanged.
+    </div>
+
+    <!-- 3 -->
+    <h2 class="g-h2" id="lasi-structure"><span class="g-secnum">3.</span>Survey structure</h2>
+
+    <h3 class="g-h3" id="lasi-structure-design">3.1 Design and weights</h3>
+    <p class="g-p">
+      LASI uses a multistage stratified sampling design. For any descriptive estimate you need to
+      account for the sampling weights and the PSU/strata structure; ignoring them will give you
+      point estimates and confidence intervals that are wrong in ways that are easy to miss.
+    </p>
+    <p class="g-p">
+      This subsection will eventually show: how to identify the weight variable, how to declare the
+      survey design in Stata (<span class="g-inline">svyset</span>) and R (<span class="g-inline">survey</span> /
+      <span class="g-inline">srvyr</span>), and a worked example of a weighted proportion with a
+      design-correct standard error.
+    </p>
+
+    <h3 class="g-h3" id="lasi-structure-codebook">3.2 Reading the codebook</h3>
+    <p class="g-p">
+      The codebook is where most beginner mistakes are avoided. Look for three things on every
+      variable before you use it:
+    </p>
+    <ul class="g-list">
+      <li><strong>Value labels.</strong> Codes like <span class="g-inline">9</span>, <span class="g-inline">99</span>,
+        <span class="g-inline">-8</span> usually mean &ldquo;don&rsquo;t know / refused / not applicable&rdquo; and must be
+        set to missing before any analysis.</li>
+      <li><strong>Skip logic.</strong> Many questions are only asked of a subset (e.g. only women, only those
+        reporting a condition). The denominator matters.</li>
+      <li><strong>Wave.</strong> A variable that exists in Wave 1 may be dropped or renamed in Wave 2.</li>
+    </ul>
+
+    <!-- 4 -->
+    <h2 class="g-h2" id="lasi-first"><span class="g-secnum">4.</span>First steps in Stata / R</h2>
+    <p class="g-p">
+      The snippets below are the minimum needed to get a clean, weighted descriptive estimate. They
+      are placeholders for the worked examples that will grow here.
+    </p>
+
+    <h3 class="g-h3" id="lasi-first-stata">4.1 Stata</h3>
+    <div class="g-code"><code>* Load the individual module
+use "lasi_individual_w1.dta", clear
+
+* Recode special missing values
+recode var1 (9 99 -8 = .)
+
+* Declare the survey design
+svyset psu [pw = weight_var], strata(strata_var)
+
+* Weighted proportion with design-correct SE
+svy: proportion var1</code></div>
+
+    <h3 class="g-h3" id="lasi-first-r">4.2 R</h3>
+    <div class="g-code"><code>library(survey)
+library(srvyr)
+
+lasi &lt;- haven::read_dta("lasi_individual_w1.dta")
+
+lasi &lt;- lasi |&gt;
+  mutate(var1 = na_if(var1, 9),
+         var1 = na_if(var1, 99))
+
+des &lt;- lasi |&gt;
+  as_survey_design(ids = psu, strata = strata_var, weights = weight_var)
+
+des |&gt; summarise(prop = survey_mean(var1, na.rm = TRUE))</code></div>
+
+    <div class="g-note">
+      <span class="g-note-label">Coming soon</span>
+      A full walk-through of merging the individual and household modules, handling the
+      long-format ADL file, and computing a weighted prevalence with a 95% CI in both Stata and R.
+    </div>
+
+    <!-- 5 -->
+    <h2 class="g-h2" id="lasi-weights"><span class="g-secnum">5.</span>Weights &amp; variance</h2>
+    <p class="g-p">
+      Two practical rules I keep coming back to: (i) always report the design you used, and (ii) never
+      compare a weighted estimate from LASI to an unweighted estimate from another survey and assume
+      the difference is substantive. This section will spell out the design variables, the
+      difference between analytic and post-stratified weights, and a checklist for reproducible
+      weighted estimates.
+    </p>
+
+    <!-- 6 -->
+    <h2 class="g-h2" id="lasi-checks"><span class="g-secnum">6.</span>Common pitfalls</h2>
+    <ul class="g-list">
+      <li>Forgetting to set special codes (9 / 99 / -8) to missing.</li>
+      <li>Analysing without <span class="g-inline">svyset</span> and reporting inflated precision.</li>
+      <li>Merging on the wrong identifier &mdash; check that the merge is 1:1 or 1:m as documented.</li>
+      <li>Treating a variable that is only asked of a subset as if it were asked of everyone.</li>
+      <li>Comparing variables across waves without checking the codebook for renames.</li>
+    </ul>
+
+    <!-- 7 -->
+    <h2 class="g-h2" id="lasi-faq"><span class="g-secnum">7.</span>FAQ</h2>
+    <div class="g-acc">
+      <div class="g-acc-item">
+        <button class="g-acc-head" onclick="nkaGuideToggle(this)">
+          <span>Can I share the LASI data with a collaborator?</span>
+          <span class="g-acc-arrow">&#9654;</span>
+        </button>
+        <div class="g-acc-body">
+          No &mdash; each user needs their own approved access. Share code, not data.
+        </div>
+      </div>
+      <div class="g-acc-item">
+        <button class="g-acc-head" onclick="nkaGuideToggle(this)">
+          <span>Should I use Stata or R?</span>
+          <span class="g-acc-arrow">&#9654;</span>
+        </button>
+        <div class="g-acc-body">
+          Whichever you are fluent in. Both handle the survey design well; the examples here are
+          given in both so you can follow either.
+        </div>
+      </div>
+      <div class="g-acc-item">
+        <button class="g-acc-head" onclick="nkaGuideToggle(this)">
+          <span>Where do I report a data issue?</span>
+          <span class="g-acc-arrow">&#9654;</span>
+        </button>
+        <div class="g-acc-body">
+          Contact the LASI data team listed in the README that ships with your download. Keep a
+          note of the variable name, wave, and the observation(s) affected.
+        </div>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <h2 class="g-h2" id="lasi-refs"><span class="g-secnum">8.</span>Further reading</h2>
+    <ul class="g-list">
+      <li>LASI India Report &mdash; the official overview of Wave 1.</li>
+      <li>The HRS family of surveys &mdash; for cross-country comparability notes.</li>
+      <li>Survey analysis vignettes in Stata (<span class="g-inline">help svy</span>) and R
+        (<span class="g-inline">vignette("survey")</span>).</li>
+    </ul>
+
+    <div class="g-pagenav">
+      <a href="/p/resources-notes.html">&larr; Resources &amp; Notes</a>
+      <span class="g-muted">Next: worked examples (coming soon)</span>
+    </div>
+
+  </main>
+</div>
+
+</div>
+
+<script>
+function nkaGuideToggle(btn){
+  var item = btn.parentElement;
+  var wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.nka-guide .g-acc-item').forEach(function(i){ i.classList.remove('open'); });
+  if(!wasOpen) item.classList.add('open');
+}
+</script>
