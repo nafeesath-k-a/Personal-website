@@ -163,7 +163,7 @@
       naturally to the questions I work on around elderly wellbeing and household structure.
     </p>
     <p class="g-p">
-      This section will eventually include: waves and coverage, sampling frame, key modules, and how
+      This section will eventually include: coverage, sampling frame, key modules, and how
       LASI compares to NFHS and NSSO for the kinds of questions you might want to ask.
     </p>
 
@@ -218,8 +218,7 @@
 
     <div class="g-note">
       <span class="g-note-label">Note</span>
-      The exact file names and module structure differ between waves. Always read the release notes that
-      ship with a new wave before assuming a variable name or a module layout is unchanged.
+     File names and module structures vary between waves, so if a new wave is released, always review its release notes before assuming that variable names or module layouts remain the same
     </div>
 
     <!-- 3 -->
@@ -249,7 +248,7 @@
         set to missing before any analysis.</li>
       <li><strong>Skip logic.</strong> Many questions are only asked of a subset (e.g. only women, only those
         reporting a condition). The denominator matters.</li>
-      <li><strong>Wave.</strong> A variable that exists in Wave 1 may be dropped or renamed in Wave 2.</li>
+      
     </ul>
 
     <!-- 4 -->
@@ -310,7 +309,7 @@ des |&gt; summarise(prop = survey_mean(var1, na.rm = TRUE))</code></div>
       <li>Analysing without <span class="g-inline">svyset</span> and reporting inflated precision.</li>
       <li>Merging on the wrong identifier &mdash; check that the merge is 1:1 or 1:m as documented.</li>
       <li>Treating a variable that is only asked of a subset as if it were asked of everyone.</li>
-      <li>Comparing variables across waves without checking the codebook for renames.</li>
+      <li>Comparing variables without checking the codebook for renames.</li>
     </ul>
 
     <!-- 7 -->
