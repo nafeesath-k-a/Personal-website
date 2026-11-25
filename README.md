@@ -57,7 +57,7 @@ data-use agreement. **Nothing in this repository redistributes the data.**
   [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3), and
   [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono), via
   Google Fonts.
-- Everything else (text, code, design decisions) is my own.
+- Everything else (text, code, design decisions) is my own created with the help of AI.
 
 ---
 
