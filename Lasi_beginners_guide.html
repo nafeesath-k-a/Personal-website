@@ -159,7 +159,7 @@
     <p class="g-p">
       LASI is India&rsquo;s first nationally representative longitudinal survey of adults aged 45 and above,
       designed to mirror the family of Health and Retirement Studies (HRS, SHARE, CHARLS, etc.). 
-      The Wave 1 survey was conducted in 2017-18 and wave 2 survey will be undertaken in 2024-25 by the 
+      The Wave 1 survey was conducted in 2017-18 and wave 2 survey has been undergoing since 2024-25 by the 
       International Institute for population Sciences (IIPS). It is
       the main source for studying ageing, health, and economic wellbeing in India, and it links
       naturally to the questions I work on around elderly wellbeing and household structure.
@@ -237,17 +237,62 @@
     
     <h3 class="g-h3" id="lasi-access-files">2.2 What you get</h3>
     <table class="g-table">
-      <thead>
-        <tr><th>File / folder</th><th>What it contains</th><th>Use it for</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Individual module</td><td>One row per respondent aged 45+</td><td>Most health, cognition, and work analyses</td></tr>
-        <tr><td>Household module</td><td>One row per household</td><td>Consumption, assets, household composition</td></tr>
-        <tr><td>Section modules</td><td>Long-format files for specific topics (e.g. ADL, chronic conditions)</td><td>Merging to the individual file</td></tr>
-        <tr><td>Codebook</td><td>Variable names, labels, value codes, skip logic</td><td>Everything &mdash; read this before you touch the data</td></tr>
-        <tr><td>Weights &amp; design</td><td>Sampling weights and strata/PSU identifiers</td><td>Any population-level estimate</td></tr>
-      </tbody>
-    </table>
+  <thead>
+    <tr><th>Dataset / file</th><th>What it contains</th><th>Use it for</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>LASI Wave 1 — State &amp; UTs</strong> <span class="g-muted">(SPSS .sav, 95.42&nbsp;MB, 2017–18)</span></td>
+      <td>
+        The full Wave 1 release for all states and union territories, bundled as a set of modules:
+        <ul>
+          <li><code>1_LASI_W1_HH_roster.sav</code> — household roster (one row per member)</li>
+          <li><code>2_LASI_W1_Household_v4.sav</code> — household module (one row per household)</li>
+          <li><code>3_LASI_W1_Individual_v4.sav</code> — individual module (one row per respondent aged 45+)</li>
+          <li><code>4_LASI_W1_Biomarker.sav</code> — biomarker measurements</li>
+          <li><code>5_LASI_W1_CV_memberfile.sav</code> — cardiovascular member file</li>
+          <li><code>6_LASI_W1_CV_deathmemberfile.sav</code> — cardiovascular death-member file</li>
+          <li><code>LASI_W1_Community_data_AllstatesUTs_v4.sav</code> — community-level data</li>
+          <li><code>Data user guide_IIPS-LASI_All_states&amp;UTs.pdf</code> — data user guide</li>
+        </ul>
+      </td>
+      <td>Everything — this is the core Wave 1 release. Start with the user guide, then merge modules by the household/individual IDs.</td>
+    </tr>
+    <tr>
+      <td><strong>LASI Wave 1 — Metro cities</strong> <span class="g-muted">(SPSS .sav, 7.80&nbsp;MB, 2017–18)</span></td>
+      <td>The same Wave 1 modules, restricted to the metro-city sample.</td>
+      <td>Urban / metro-only analyses; a smaller, faster download than the full State &amp; UTs release.</td>
+    </tr>
+    <tr>
+      <td><strong>LASI Wave 1 — DBS Dataset</strong> <span class="g-muted">(STATA .dta, 147.70&nbsp;MB, 2017–18)</span></td>
+      <td>Dried blood spot (DBS) biomarker data, in long/wide STATA format.</td>
+      <td>Biomarker-based analyses (e.g. anaemia, HbA1c, CRP). Merge to the individual file by ID.</td>
+    </tr>
+    <tr>
+      <td><strong>LASI Wave 1 — Spirometry Dataset</strong> <span class="g-muted">(STATA .dta, 6.81&nbsp;MB, 2017–18)</span></td>
+      <td>Lung-function (spirometry) measurements.</td>
+      <td>Respiratory / lung-function analyses. Merge to the individual file by ID.</td>
+    </tr>
+    <tr>
+      <td><strong>LASI Wave 1 — Environmental Exposure Dataset</strong> <span class="g-muted">(STATA .dta, 2.16&nbsp;MB, 2017–18)</span></td>
+      <td>Environmental exposure variables linked to respondents.</td>
+      <td>Analyses linking exposure (e.g. air pollution, cooking fuel) to health outcomes.</td>
+    </tr>
+    <tr>
+      <td><strong>LASI Environmental Exposures Codebook</strong> <span class="g-muted">(Document, 55.94&nbsp;KB)</span></td>
+      <td>Variable names, labels, value codes and skip logic for the environmental exposure dataset.</td>
+      <td>Read this before using the Environmental Exposure Dataset.</td>
+    </tr>
+    <tr>
+      <td><strong>LASI Pilot (2010) Dataset</strong> <span class="g-muted">(STATA .dta, 968.54&nbsp;KB, 2010)</span></td>
+      <td>The 2010 pilot round — a small pre-Wave 1 sample.</td>
+      <td>Methodological / pilot work only; not for population estimates.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+    
 
     <div class="g-note">
       <span class="g-note-label">Note</span>
