@@ -143,7 +143,7 @@
       Notes for students getting started with the Longitudinal Ageing Study in India (LASI):
       how to request and download the data, how the survey design and codebooks are organised,
       and the first steps in Stata or R. Written as a walk-through rather than a formal course.
-      It is a living document &mdash; sections, figures, and worked examples will be filled in as I go.
+      It is a living document; sections, figures, and worked examples will be filled in as I go.
     </p>
     <div class="g-meta">
       <span>LASI</span>
@@ -158,7 +158,9 @@
     <h2 class="g-h2" id="lasi-what"><span class="g-secnum">1.</span>What is LASI?</h2>
     <p class="g-p">
       LASI is India&rsquo;s first nationally representative longitudinal survey of adults aged 45 and above,
-      designed to mirror the family of Health and Retirement Studies (HRS, SHARE, CHARLS, etc.). It is
+      designed to mirror the family of Health and Retirement Studies (HRS, SHARE, CHARLS, etc.). 
+      The Wave 1 survey was conducted in 2017-18 and wave 2 survey will be undertaken in 2024-25 by the 
+      International Institute for population Sciences (IIPS). It is
       the main source for studying ageing, health, and economic wellbeing in India, and it links
       naturally to the questions I work on around elderly wellbeing and household structure.
     </p>
@@ -169,39 +171,70 @@
 
     <!-- 2 -->
     <h2 class="g-h2" id="lasi-access"><span class="g-secnum">2.</span>Getting the data</h2>
-    <p class="g-p">
-      LASI is not a public download the way NFHS is. Access is managed by the IIPS / LASI team and
-      requires a short application. The exact steps below are the ones I followed &mdash; they may change.
-    </p>
-
-    <h3 class="g-h3" id="lasi-access-request">2.1 Requesting access</h3>
-    <div class="g-steps">
-      <div class="g-step">
-        <div>
-          <div class="g-step-title">Identify yourself and your institution</div>
-          <div class="g-step-body">You will need an institutional email and a supervisor or PI who can vouch for the use of the data.</div>
-        </div>
-      </div>
-      <div class="g-step">
-        <div>
-          <div class="g-step-title">Submit the data request form</div>
-          <div class="g-step-body">Briefly state the research question, the variables you need, and the level of geography (state / district / individual).</div>
-        </div>
-      </div>
-      <div class="g-step">
-        <div>
-          <div class="g-step-title">Sign the data use agreement</div>
-          <div class="g-step-body">Standard confidentiality terms &mdash; no re-distribution, no attempt to re-identify respondents.</div>
-        </div>
-      </div>
-      <div class="g-step">
-        <div>
-          <div class="g-step-title">Receive the download link</div>
-          <div class="g-step-body">Typically a secure link plus a codebook and a short README. Keep the README &mdash; it saves hours later.</div>
-        </div>
+<p class="g-p">
+  Access is managed by the IIPS / LASI team and requires a short application
+  through the <a href="https://www.iipsindia.ac.in/content/LASI-data" target="_blank" rel="noopener noreferrer">IIPS LASI data portal</a>.
+  The exact steps below are the ones I followed, they may change.
+</p>
+    
+<h3 class="g-h3" id="lasi-access-request">2.1 Requesting access</h3>
+<p class="g-p">
+  The datasets are free to download. The workflow is: browse the LASI data catalogue,
+  pick a dataset, request it, register (first time) or log in, wait for approval
+  (a few working days), then download.
+</p>
+<div class="g-steps">
+  <div class="g-step">
+    <div>
+      <div class="g-step-title">Open the LASI data catalogue</div>
+      <div class="g-step-body">
+        From the <a href="https://www.iipsindia.ac.in/content/LASI-data" target="_blank" rel="noopener noreferrer">IIPS LASI data page</a>,
+        click <strong>LASI Wave 1 – DBS Dataset</strong>. This takes you to the
+        dataset page at <a href="https://www.iipsdata.ac.in/datacatalog_detail/5" target="_blank" rel="noopener noreferrer">iipsdata.ac.in/datacatalog_detail/5</a>.
       </div>
     </div>
+  </div>
+  <div class="g-step">
+    <div>
+      <div class="g-step-title">Choose the dataset you need</div>
+      <div class="g-step-body">
+        On the dataset page you can select the <strong>State &amp; UTs</strong> file or the
+        <strong>Metro cities</strong> file. Datasets are distributed as SPSS (`.sav`) or
+        STATA (`.dta`) files — pick whichever format your analysis software uses.
+        All datasets are <strong>free</strong>; there are no charges.
+      </div>
+    </div>
+  </div>
+  <div class="g-step">
+    <div>
+      <div class="g-step-title">Register or log in</div>
+      <div class="g-step-body">
+        When you click <em>Request</em>, you will be asked to log in. If this is your
+        first time, register with your email; otherwise log in with your existing account.
+      </div>
+    </div>
+  </div>
+  <div class="g-step">
+    <div>
+      <div class="g-step-title">Wait for approval</div>
+      <div class="g-step-body">
+        After submitting the request, you will receive an email within a few working days
+        stating that your request for the <strong>LASI Wave 1 – DBS Dataset</strong> has been
+        <em>Approved</em>.
+      </div>
+    </div>
+  </div>
+  <div class="g-step">
+    <div>
+      <div class="g-step-title">Log in and download</div>
+      <div class="g-step-body">
+        Once approved, log in again and download the dataset from the catalogue.
+      </div>
+    </div>
+  </div>
+</div>
 
+    
     <h3 class="g-h3" id="lasi-access-files">2.2 What you get</h3>
     <table class="g-table">
       <thead>
