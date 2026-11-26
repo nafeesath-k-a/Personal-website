@@ -61,15 +61,5 @@ data-use agreement. **Nothing in this repository redistributes the data.**
 
 ---
 
-## Running locally
 
-No setup required. Either:
 
-1. Clone the repo and open `index.html` in a browser, **or**
-2. Serve it locally:
-
-```bash
-git clone https://github.com/nafeesath-k-a/Personal-website.git
-cd Personal-website
-python3 -m http.server 8000
-# then open http://localhost:8000
